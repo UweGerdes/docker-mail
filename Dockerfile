@@ -31,7 +31,7 @@ COPY postfix/ /etc/postfix/
 COPY alpine/pinerc /home/${USERNAME}/.pinerc
 RUN chown ${USERNAME}:${USERNAME} /home/${USERNAME}/.pinerc
 
-COPY start.sh /start.sh
+COPY /conf/start.sh /start.sh
 RUN chmod a+x /start.sh
 
 EXPOSE 25 110 143
