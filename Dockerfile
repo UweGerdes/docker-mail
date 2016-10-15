@@ -26,13 +26,12 @@ RUN apt-get update && \
 	echo "${USERNAME}:${PASSWORD}" | chpasswd && \
 	sed -i -e 's/(lmtp\s+unix\s+-\s+-\s+)-(\s+-\s+-\s+lmtp)/$1n$2/g' /etc/postfix/master.cf
 
+COPY /conf/start.sh /start.sh
+RUN chmod a+x /start.sh
 COPY dovecot/ /etc/dovecot/
 COPY postfix/ /etc/postfix/
 COPY alpine/pinerc /home/${USERNAME}/.pinerc
 RUN chown ${USERNAME}:${USERNAME} /home/${USERNAME}/.pinerc
-
-COPY /conf/start.sh /start.sh
-RUN chmod a+x /start.sh
 
 EXPOSE 25 110 143
 
