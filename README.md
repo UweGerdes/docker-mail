@@ -4,6 +4,16 @@ For testing my application I need a small mail server that accepts smtp mail for
 
 The application is configured to use hostname mail.local.
 
+## Build
+
+Build the image with (mind the dot):
+
+```bash
+$ docker build -t uwegerdes/mail .
+```
+
+## Usage
+
 Run the mail container with:
 
 ```bash
