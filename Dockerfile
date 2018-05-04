@@ -1,3 +1,5 @@
+# mail docker with SMTP, POP3, IMAP, alpine client
+
 FROM uwegerdes/baseimage
 MAINTAINER Uwe Gerdes <entwicklung@uwegerdes.de>
 
@@ -36,3 +38,4 @@ RUN chown ${USERNAME}:${USERNAME} /home/${USERNAME}/.pinerc
 EXPOSE 25 110 143
 
 CMD ["/start.sh"]
+

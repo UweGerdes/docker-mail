@@ -31,6 +31,7 @@ $ docker exec -it mail tail -f /var/log/dovecot.log
 $ docker exec -it mail bash
 ```
 
-Alpine is a simple mail client, if you started test-forms-login from the `uwegerdes/frontend-development` container you should find the mails. See the project on github.
+Alpine is a simple mail client, if you started test-forms-login from the [`uwegerdes/frontend-development`](https://github.com/UweGerdes/frontend-development) you should find the mails for testbox (testpass).
 
 Hit CTRL-C to stop the tail command and CTRL-D to exit the bash.
+
